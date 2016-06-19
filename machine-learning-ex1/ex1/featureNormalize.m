@@ -24,20 +24,9 @@ sigma = zeros(1, size(X, 2));
 %
 % Hint: You might find the 'mean' and 'std' functions useful.
 %       
-totalfeatures = size(X,2);
-for i=1:totalfeatures
-    mu(i) = mean(X(:,i));
-    sigma(i) = std(X(:,i));
-    
-    X_norm(:,i) = (X_norm(:,i)-mu(i))/sigma(i);
-endfor
-
-
-
-
-
-
-
+mu = mean(X);
+sigma = std(X);
+X_norm = (X_norm - mu)./sigma;
 
 % ============================================================
 
